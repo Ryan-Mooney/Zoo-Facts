@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zoo Facts</title>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" 
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+		<link href="/static/style.css" rel="stylesheet">
+	</head>
+	<body class="zoospam-body">
+		<div class="container text-center">
+			<div class="">
+				<div class="well well-zoospam">
+					<p class="home-zoospam">Zoo Facts</p>
+					<p class="sub-zoospam">Teach your friends all about the animal kingdom!</p>
+					<a href="/" class="sub-zoospam">Return to Ryan Mooney's Main Page</a>
+					<form class="form-field" method="post">
+						{% csrf_token %}
+						{{ form }}
+						<div id="submitbutton">
+							<input type=submit class="form-button btn btn-default" alignment="center" name="submit" value ="Submit"> <input type=submit class="form-button btn btn-default" alignment="center" name="test" value="Test">
+						</div>
+					</form>
+					<p class="confirmation-zoospam">{{message_sent}}</p>
+					{{sent_facts|safe}}
+					<a href="./attributions" class="sub-zoospam" text-alignment="right">Attributions</a>
+				</div>
+			</div>
+		</div>
+		<script>
+		</script>
+	</body>
+</html>
+

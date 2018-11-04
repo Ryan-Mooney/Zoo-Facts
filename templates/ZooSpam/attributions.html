@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zoo Spam - Attributions</title>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" 
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+		<link href="/static/style.css" rel="stylesheet">
+	</head>
+	<body class="zoospam-body">
+		<div class="container text-center">
+			<div class="">
+				<div class="well well-zoospam">
+					<p class="home-zoospam">Zoo Facts</p>
+					<a href="/ZooFacts" class="sub-zoospam">Home</a>
+					<p class="sub-zoospam">I would like to thank WikiCommons and the following photographers/users for their wonderful pictures used in this project:</p>
+					<ul>
+					{% for name in attribution_list %}
+						<li class="li-zoospam">{{name}}</li>
+					{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script>
+		</script>
+	</body>
+</html>
+
